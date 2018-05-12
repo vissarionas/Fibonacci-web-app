@@ -3,6 +3,8 @@ var getJson = require('./components/create-json')
 
 var app = express()
 
+const PORT = process.env.PORT || 8080;
+
 app.get("/", (req, res) => {
     res.send('ROOT')
 })
@@ -13,4 +15,4 @@ app.get("/sum/:num" , (req, res) => {
     }
 )
 
-app.listen(3000, null);
+app.listen(PORT, null);
